@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Tiles from "./containers/Tiles";
+import Tiles from "./Tiles";
 
 class App extends React.Component {
     public render() {

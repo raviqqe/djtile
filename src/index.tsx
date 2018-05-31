@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { injectGlobal } from "styled-components";
 
-import App from "./App";
+import App from "./containers/App";
 
 injectGlobal`
     body {
