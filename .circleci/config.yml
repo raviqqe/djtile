@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node
+    steps:
+      - run:
+          name: Setup
+          command: |
+            apt -y update --fix-missing
+            apt -y upgrade
+            apt -y install inkscape
+            npm install --global codecov
+      - checkout
+      - run:
+          name: Dependencies
+          command: npm install
+      - run:
+          name: Build
+          command: npm run-script build
+      - run:
+          name: Test
+          command: |
+            npm run-script test
+            codecov

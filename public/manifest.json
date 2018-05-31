@@ -1,0 +1,13 @@
+{
+	"short_name": "DJ Tile",
+	"name": "DJ Tile",
+	"icons": [{
+		"src": "icon512.png",
+		"sizes": "512x512",
+		"type": "image/png"
+	}],
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "black",
+	"background_color": "black"
+}
