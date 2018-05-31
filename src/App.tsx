@@ -1,8 +1,10 @@
 import * as React from "react";
 
+import Tiles from "./containers/Tiles";
+
 class App extends React.Component {
     public render() {
-        return <div>Hello, world!</div>;
+        return <Tiles />;
     }
 }
 

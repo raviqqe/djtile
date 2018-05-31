@@ -1,6 +1,7 @@
 {
 	"extends": ["tslint:recommended", "tslint-react"],
 	"rules": {
+		"no-unused-expression": false,
 		"quotemark": [true, "double", "jsx-double"]
 	}
 }
