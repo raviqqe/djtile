@@ -11,12 +11,25 @@ const Background = styled.div`
     align-items: center;
 `;
 
-const Tiles = styled.div`
-    display: grid;
+const Row = styled.div`
+    display: flex;
 `;
 
 export default class extends React.Component {
     public render() {
-        return <Background><Tiles><Tile /></Tiles></Background>;
+        return (
+            <Background>
+                <div>
+                    <Row>
+                        <Tile color="red" />
+                        <Tile color="yellow" />
+                    </Row>
+                    <Row>
+                        <Tile color="green" />
+                        <Tile color="blue" />
+                    </Row>
+                </div>
+            </Background>
+        );
     }
 }

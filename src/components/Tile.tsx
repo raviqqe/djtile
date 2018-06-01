@@ -4,11 +4,15 @@ import styled from "styled-components";
 const Tile = styled.div`
     width: 2cm;
     height: 2cm;
-    background: red;
+    background: ${({ color }) => color};
 `;
 
-export default class extends React.Component {
+interface IProps {
+    color: string;
+}
+
+export default class extends React.Component<IProps> {
     public render() {
-        return <Tile />;
+        return <Tile {...this.props} />;
     }
 }
