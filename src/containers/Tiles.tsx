@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import Recorder from "../components/Recorder";
 import Tile from "../components/Tile";
 
 const Background = styled.div`
@@ -19,6 +20,7 @@ export default class extends React.Component {
     public render() {
         return (
             <Background>
+                <Recorder />
                 <div>
                     <Row>
                         <Tile color="red" />

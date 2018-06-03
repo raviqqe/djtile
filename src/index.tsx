@@ -1,8 +1,10 @@
+import { Provider } from "mobx-react";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { injectGlobal } from "styled-components";
 
 import App from "./containers/App";
+import store from "./store";
 
 injectGlobal`
     body {
@@ -19,7 +21,7 @@ injectGlobal`
     }
 `;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Provider {...store}><App /></Provider>, document.getElementById("root"));
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js");
