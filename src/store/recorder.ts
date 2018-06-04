@@ -20,6 +20,10 @@ export default class {
     public recordAudio = async () => {
         const recorder = await this.recorder;
 
+        if (recorder.state === "recording") {
+            return;
+        }
+
         const blob: Promise<Blob> = new Promise((resolve) =>
             recorder.ondataavailable = ({ data }) => resolve(data));
 
