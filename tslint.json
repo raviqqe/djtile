@@ -4,6 +4,7 @@
 		"jsx-no-lambda": false,
 		"jsx-no-multiline-js": false,
 		"no-console": false,
+		"no-shadowed-variable": false,
 		"no-unused-expression": false,
 		"quotemark": [true, "double", "jsx-double"]
 	}
