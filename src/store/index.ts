@@ -6,6 +6,11 @@ import Recorder from "./recorder";
 configure({ enforceActions: true });
 
 export default class {
-    public channels = new Channels();
-    public recorder = new Recorder();
+    public channels: Channels;
+    public recorder: Recorder;
+
+    constructor() {
+        this.channels = new Channels();
+        this.recorder = new Recorder(this.channels);
+    }
 }
