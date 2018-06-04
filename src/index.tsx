@@ -4,7 +4,7 @@ import * as ReactDOM from "react-dom";
 import { injectGlobal } from "styled-components";
 
 import App from "./containers/App";
-import store from "./store";
+import Store from "./store";
 
 injectGlobal`
     body {
@@ -21,7 +21,9 @@ injectGlobal`
     }
 `;
 
-ReactDOM.render(<Provider {...store}><App /></Provider>, document.getElementById("root"));
+const store = new Store();
+
+ReactDOM.render(<App {...store} />, document.getElementById("root"));
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js");

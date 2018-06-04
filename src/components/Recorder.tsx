@@ -1,12 +1,11 @@
-import { inject, observer } from "mobx-react";
+import { observer } from "mobx-react";
 import * as React from "react";
 
 import Recorder from "../store/recorder";
 
-@inject(({ recorder }) => recorder)
 @observer
-export default class extends React.Component<Partial<Recorder>> {
+export default class extends React.Component<{ recorder: Recorder }> {
     public render() {
-        return <button onClick={this.props.recordAudio}>record</button>;
+        return <button onClick={this.props.recorder.recordAudio}>record</button>;
     }
 }
