@@ -8,6 +8,7 @@ import Store from "./store";
 
 injectGlobal`
     body {
+        font: 16px sans-serif;
         width: 100vw;
         height: 100vh;
         padding: 0;
