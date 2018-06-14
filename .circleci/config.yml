@@ -17,9 +17,9 @@ jobs:
           command: npm install
       - run:
           name: Build
-          command: npm run-script build
+          command: npm run build
       - run:
           name: Test
           command: |
-            npm run-script test
+            npm run test
             codecov
